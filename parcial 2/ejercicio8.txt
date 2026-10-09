@@ -1,0 +1,14 @@
+//Ejemplo incorrecto
+
+#include <iostream>
+using namespace std;
+
+void fallomemoria(){
+    int* punterosalvaje; //Sin especificar direccion
+    *punterosalvaje = 1; //Direccion que no se conoce
+    cout << *punterosalvaje; //Se imprime y provoca un error
+}
+
+int main(){
+    fallomemoria();
+}

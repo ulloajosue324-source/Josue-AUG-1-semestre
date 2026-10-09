@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float calificacionmayor[5];
+    float promediosgrupouno[5] = {9.8, 7.4, 9.0, 1.2, 5.6};
+    float promediosgrupodos[5] = {10.0, 10.0, 5.8, 4.5, 7.9};
+
+    for (int i = 0; i < 5; i++){
+        calificacionmayor[i] = promediosgrupouno[i];
+        if (promediosgrupodos[i] > promediosgrupouno[i]){
+            calificacionmayor[i] = promediosgrupodos[i];
+        }
+    }
+    for (int i = 0; i < 5; i++){
+        cout << "Promedio" << i+1 << " del grupo 1: " << promediosgrupouno[i] <<endl;
+        cout << "Promedio" << i+1 << " del grupo 2: " << promediosgrupodos[i] <<endl;
+        cout << "Promedio mayor de la fila " <<  i+1 << ": " << calificacionmayor[i]<<endl;
+    }
+}

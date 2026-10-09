@@ -1,0 +1,31 @@
+#include <iostream>
+ using namespace std;
+
+ int main(){
+   float mayor_promedio[10];
+    float alumnosgrupos[10][3] = {
+      {10.0, 9.4},
+      {6.7, 8.4},
+      {9.7, 10.0},
+      {6.8, 5.4},
+      {7.5, 2.4},
+      {9.0, 4.6},
+      {6.0, 2.1},
+      {1.7, 4.5},
+      {4.8, 9.9},
+      {7.4, 10.0}
+   };
+   for (int i = 0;i < 10; i++){
+      mayor_promedio[i] = alumnosgrupos[i][0];
+      if (alumnosgrupos[i][1] > alumnosgrupos[i][0]){
+         mayor_promedio[i] = alumnosgrupos[i][1];
+      }
+      alumnosgrupos[i][2] = mayor_promedio[i];
+   }
+   for (int i = 0; i<10;i++){
+      for (int j = 0; j < 3; j++){
+      cout << alumnosgrupos[i][j] << "     ";
+      }
+      cout << endl;
+   }
+}

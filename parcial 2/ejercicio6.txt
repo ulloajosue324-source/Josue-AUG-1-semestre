@@ -1,0 +1,36 @@
+/*Struct Alumno. Define struct Alumno { string nombre; string matricula; float calif[3]; 
+} y crea un arreglo de 5 alumnos. Captura sus datos y muestra el promedio de cada uno.*/
+ #include <iostream>
+ #include <string>
+ using namespace std;
+
+ struct Alumno {
+    string nombre;
+    string matricula;
+    float calif[3];
+ };
+
+ int main(){
+    Alumno alumnos[5];
+    float promedioincompleto[5] = {0};
+
+    for (int i = 0;i < 5;i++){
+        cout << "Ingrese nombre del alumno." <<endl;
+        getline(cin, alumnos[i].nombre);
+
+        cout << "Ingrese la matricula del alumno."<<endl;
+        cin >> alumnos[i].matricula;
+
+        cout << "Ingrese tres calificaciones: ";
+        for (int j = 0; j < 3; j++){
+            cin >> alumnos[i].calif[j];
+            promedioincompleto[i] += alumnos[i].calif[j];
+        }
+        cin.ignore();
+    }
+
+    for (int i = 0; i < 5;i++){
+            cout << "Alumno " << alumnos[i].nombre << " y su promedio es de: " << promedioincompleto[i]/3<<endl;
+    }
+
+ }

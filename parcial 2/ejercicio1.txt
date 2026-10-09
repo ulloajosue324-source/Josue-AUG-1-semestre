@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float sumaPromedio = 0;
+    float promedio;
+    float calificaciones[6] = {10.0, 7.0, 5.6, 7.8, 6.7};
+    for (int i = 0; i < 5; i++)
+    {
+        sumaPromedio += calificaciones[i];
+        cout << "Calificacion: " << calificaciones[i] << endl;
+    }
+    promedio = sumaPromedio / 5;
+    calificaciones[5] = promedio;
+    cout << "Promedio: " << calificaciones[5];
+    return 0;
+}

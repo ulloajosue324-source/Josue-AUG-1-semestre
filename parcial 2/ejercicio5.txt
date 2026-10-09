@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cctype>
+#include <string>
+using namespace std;
+
+int main(){
+    string nombrecompleto;
+    string solonombre;
+    string soloapellido;
+    cout << "Ingrese su nombre completo: ";
+    getline(cin, nombrecompleto);
+
+    for (char letra : nombrecompleto){
+        if(isdigit(static_cast<unsigned char>(letra))){
+            cout << "Ingrese solo letras.";
+            return 1;
+        }
+    }
+    size_t espacio = nombrecompleto.find(' ');
+    if (espacio == string::npos){
+        cout << "ingrese un espacio: ";
+        return 1;
+    }
+    
+    solonombre  = nombrecompleto.substr(0, espacio);
+    soloapellido = nombrecompleto.substr(espacio+1);
+
+    cout << "nombre: " << solonombre <<endl;
+    cout << "apellido: " << soloapellido;
+}

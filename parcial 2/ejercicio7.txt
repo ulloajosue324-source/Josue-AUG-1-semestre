@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+void funcionintercambia(int& x, int& y){
+    x = x+y;
+    y = x-y;
+    x=x-y;
+}
+
+int main(){
+    int num1;
+    int num2;
+
+    cout << "Ingrese el valor del numero 1: "<<endl;
+    cin >> num1;
+
+    cout << "Ingrese el valor del numero 2: " <<endl;
+    cin>> num2;
+
+    cout << "Valor del numero 1: " <<num1 <<endl;
+    cout << "Valor del numero 2: " <<num2<<endl;
+    funcionintercambia(num1,num2);
+    cout << "Valor del numero 1 tras intercambiar: " <<num1 <<endl;
+    cout << "Valor del numero 2 tras intercambiar: " <<num2<<endl;
+}

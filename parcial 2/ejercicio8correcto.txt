@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+void sinfallo(){
+    int valor = 0;
+    int* puntero = &valor; //Se le da una direccion valida al puntero
+    *puntero = 42; 
+    cout << "Valor: " << *puntero << endl;
+}
+
+int main(){
+    sinfallo();
+    return 0;
+}
